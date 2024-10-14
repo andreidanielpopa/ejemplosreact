@@ -1,15 +1,16 @@
 import './SumarNumeros.css'
 import imagen from '../../assets/images/cruzzi2.jfif'
-function SumarNumeros() {
-    const sumaNumero = (numero1, numero2) => {
-        var suma = numero1 + numero2;
+function SumarNumeros(props) {
+    
+    const sumaNumero = () => {
+        var suma = parseInt(props.numero1) + parseInt(props.numero2);
         console.log(suma);
     };
     return(
         <div>
             <img src={imagen} alt="imagen cruzzi"></img>
-            <button onClick={() => sumaNumero(2,2)}>Sumar</button>
-            <button onClick={() => sumaNumero(5,5)}>Sumar</button>
+            <br/>
+            <button onClick={() => sumaNumero()}>Sumar {props.numero1} + {props.numero2}</button>
         </div>
     )
 }

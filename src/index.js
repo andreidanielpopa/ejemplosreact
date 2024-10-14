@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
-import SumarNumeros from './components/SumarNumeros/SumarNumeros';
+import Contador from './components/Contador';
+import Car from './components/Car';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SumarNumeros/>
-    {/* <App /> */}
-    
+    <Car marca='Audi' modelo='03' aceleracion='25' velocidadmaxima='240' />
+    <Car marca='Pontiac' modelo='Firebird' aceleracion='45' velocidadmaxima='340' />
   </React.StrictMode>
 );
 
